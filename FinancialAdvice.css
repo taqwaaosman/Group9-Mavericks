@@ -2,6 +2,7 @@
 /* CSS Document */
 /* css for the menu */
 /* Style the header */
+
   .header {
     color: #0090fe;
     background-color: black;
@@ -30,6 +31,33 @@
     background-color: #0090fe;
     color: black;
   }
+
+.button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        padding: 10px 20px;
+        height: 100%;
+        width: 100%;
+        border: none;
+        outline: none;
+        border-radius: 4px;
+        background: #f77062;
+        color: #fff;
+
+    }
+
+    .button:hover {
+        background: #4837ff;
+        transition: all 0.3s ease;
+    }
+
+    .navbar_links:hover {
+        color: #4837ff;
+        transition: all 0.3s ease;
+
+    }
 
   /*Footer*/
 
