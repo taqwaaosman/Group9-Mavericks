@@ -1,13 +1,19 @@
 @charset "utf-8";
 /* CSS Document */
 /* css for the menu */
-/* Style the header */
+
+  body {
+    margin: 0;
+    background-color: black;
+    color: white;
+  }
 {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: 'kumbh Sans', sans-serif;
 }
+/* Style the header */
   .header {
     color: #0090fe;
     background-color: black;
