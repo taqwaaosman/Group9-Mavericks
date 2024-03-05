@@ -7,8 +7,13 @@ Description:
 	Our application has a clean and minimalistic dark theme with images and light coloured text accentuated with a dark grey background, with a simple and easy navigation system to improve accessibility, helping shape the user experience.
 
 Screenshot at the end of Sprint:
+<<<<<<< HEAD
+    <img class="image" src="Screenshot.png" alt="Image">
+    <img class="image" src="Screenshot2.png" alt="Image">
+=======
     <img class="image" src="Screenshot .png" alt="Image">
     <img class="image" src="Screenshot 2.png" alt="Image">
+>>>>>>> e546202765935360f41071cbc02ffb3b058cb48d
 
 
 Point form description of completed, to be completed, and cancelled features:
