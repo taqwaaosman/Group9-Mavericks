@@ -606,19 +606,23 @@
         padding: 40px 35px 55px;
         width: 750px;
          margin:150px auto 0;
+
  body
     {
     height: 100%;
     margin: 0;
     background: url('/Images/img.png') no-repeat;
     background-size: cover;
-     background-position: center;
+         background-position: center;
 }
+  
  .wrapper{
+
         display: flex;
         justify-content: center;
         align-items: center;
         min-height: 100vh;
+        background:black;
         color: #ffffff;
         border: 2px solid rgba(255,255,255,.2);
         border-radius: 10px;
@@ -629,7 +633,6 @@
         font-size: 36px;
         text-align: center;
         margin-bottom:20px;
-
         background: #4837ff;
         background: rgba(255, 255, 255, .1);
     }
@@ -640,6 +643,7 @@
         background: #4837ff;
         background: rgba(255, 255, 255, .1);
         background:rgba(255, 255, 255, .1);
+
     }
     .input-box .input-field{
         position: relative;
@@ -648,8 +652,12 @@
         background: #4837ff;
         margin: 13px 0;
         background: rgba(255, 255, 255, .1);
+        background: #4837ff;
+        margin: 13px 0;
+        background: rgba(255, 255, 255, .1);
         background: rgba(255,255,255, .1);
         margin: 13px 0;
+
     }
     .input-box .input-field input{
         width: 100%;
@@ -701,4 +709,5 @@
             margin: 10px 0;
         }
     }
+
 
