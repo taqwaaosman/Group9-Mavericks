@@ -4,68 +4,7 @@
     padding: 0;
     font-family: 'kumbh Sans', sans-serif;
 }
-/*.navbar{
-    background: black;
-    height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2rem;
-    top:0;
-    z-index: 999;
-    position: sticky;
-    width: 100%;
-}
-.navbar_container{
-    display: flex;
-    justify-content: flex-start;
-    height: 100px;
-    width: 100%;
-    max-width: 1300px;
-    z-index: 1;
-    margin: 0;
-    padding: 0;
-}
-#navbar_logo{
-     /*background-color: #ff8177;
-    background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
-    background-size: 100%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    display: inline-flex;
-    align-items: center;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 2rem;
-    margin-right: auto;
-    padding-left: 0px;
-    width: 15%;
-    object-fit: contain;
-    aspect-ratio: 3/2;
 
-    width: 15%;
-    object-fit: contain;
-    aspect-ratio: 3/2;
-    display: inline-flex;
-    align-items: center;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 2rem;
-    margin-right: auto;
-    padding-left:0;
-    position: fixed;
-    height: 100%;
-    left: 0px;
-    width: auto;
-    display: flex;
-    object-fit: contain;
-    align-items: center;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 2rem;
-    margin-right: auto;
-    aspect-ratio: 3/2;}
-*/
 .navbar {
     background: black;
     height: 80px;
@@ -545,7 +484,7 @@
         width: 200%;
         max-width: 1000Px;
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
     }
 
     .footer_link__wrapper {
@@ -646,32 +585,42 @@
         text-align: center;
         padding: 10px;
     }
+ body
+    {
+    height: 100%;
+    margin: 0;
+    background: url('/Images/img.png') no-repeat;
+    background-size: cover;
+     background-position: center;
+}
  .wrapper{
-       display: flex;
+        display: flex;
         justify-content: center;
         align-items: center;
         min-height: 100vh;
-        background:black;
         color: #ffffff;
+        border: 2px solid rgba(255,255,255,.2);
         border-radius: 10px;
+        padding: 40px 35px 55px;
+        width: 750px;
     }
     .wrapper h1{
         font-size: 36px;
         text-align: center;
         margin-bottom:20px;
-        background: #4837ff;
+        background: rgba(255, 255, 255, .1);
     }
     .wrapper .input-box{
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        background: #4837ff;
+        background:rgba(255, 255, 255, .1);
     }
     .input-box .input-field{
         position: relative;
-        width: 50%;
+        width: 48%;
         height: 50px;
-        background: #4837ff;
+        background: rgba(255,255,255, .1);
         margin: 13px 0;
     }
     .input-box .input-field input{
