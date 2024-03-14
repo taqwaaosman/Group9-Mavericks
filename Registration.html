@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+    <link rel="stylesheet" href="stylesheet.css"/>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+<!--Navbar section-->
+ <nav class="navbar">
+     <div class="navbar_container">
+         <a href="/" id="navbar_logo"><img src="Images/PTF.png" alt="PTF Logo"></a>
+         <div class="navbar_toggle" id="mobile-menu">
+             <span class="bar"></span>
+             <span class="bar"></span>
+             <span class="bar"></span>
+         </div>
+         <ul class="navbar_menu">
+             <li class="navbar_item">
+                 <a href="Home.html" class="navbar_links">Home</a>
+             </li>
+             <li class="navbar_item">
+                 <a href="/Expense.html" class="navbar_links">Services</a>
+             </li>
+             <li class="navbar_item">
+                 <a href="/" class="navbar_links">Join Us</a>
+             </li>
+              <li class="navbar_btn">
+                 <a href="/" class="button">Subscribe</a>
+             </li>
+         </ul>
+     </div>
+ </nav>
+   <div class="wrapper">
+     <form action="">
+       <h1>Registration</h1>
+       <div class="input-box">
+         <div class="input-field">
+           <input type="text" placeholder="Full Name" required>
+           <i class='bx bxs-user'></i>
+         </div>
+         <div class="input-field">
+           <input type="text" placeholder="UserName" required>
+           <i class='bx bxs-user'></i>
+         </div>
+       </div>
+       <div class="input-box">
+         <div class="input-field">
+           <input type="email" placeholder="Email" required>
+           <i class='bx bxs-envelope' ></i>
+         </div>
+         <div class="input-field">
+           <input type="Number" placeholder="Phone Number" required>
+           <i class='bx bxs-phone' ></i>
+         </div>
+       </div>
+         <div class="input-box">
+         <div class="input-field">
+           <input type="password" placeholder="Password" required>
+           <i class='bx bxs-lock-alt' ></i>
+         </div>
+         <div class="input-field">
+           <input type="password" placeholder="Confirm Password" required>
+           <i class='bx bxs-lock-alt' ></i>
+         </div>
+       </div>
+       <label><input type="checkbox">I hereby declare that the above information provided is true</label>
+       <button type="submit" class="btn">Registrater</button>
+     </form>
+   </div>
+</body>
+</html>
