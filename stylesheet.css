@@ -650,22 +650,22 @@
     {
     height: 100%;
     margin: 0;
-    background: url('/Images/img.png') no-repeat;
+    background: url('/Images/img.png') no-repeat center center fixed;
     background-size: cover;
-         background-position: center;
 }
      .wrapper{
        display: flex;
-        display: flex;
         justify-content: center;
         align-items: center;
-        min-height: 100vh;
-        background:black;
         color: #ffffff;
+         min-height: 100vh
         border: 2px solid rgba(255,255,255,.2);
         border-radius: 10px;
+         box-shadow: 0 0 10px rgba(0,0,0,.2);
+         backdrop-filter: blur(50px);
         padding: 40px 35px 55px;
         width: 750px;
+         margin:150px auto 0;
     }
     .wrapper h1{
         font-size: 36px;
@@ -732,4 +732,10 @@
         font-size: 16px;
         color: #333;
         font-weight: 600;
+    }
+    @media (max-width: 576px) {
+        .input-box .input-field{
+            width: 100%;
+            margin: 10px 0;
+        }
     }
