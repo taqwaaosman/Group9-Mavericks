@@ -1,6 +1,36 @@
-const transaction =[];
+const transaction =[
+    {
+        id:1,
+        name: 'salary',
+        amount:5000,
+        date: new Date(),
+        type:'income'
+    },
+    {
+        id:2,
+        name: 'Rent',
+        amount:5000,
+        date: new Date(),
+        type:'expenses'
+    },
+    {
+        id:3,
+        name: 'Grocery',
+        amount:5000,
+        date: new Date(),
+        type:'expenses'
+    },
+
+];
 const list = document.getElementById("transactionList");
+const status =document.getElementById('status')
 function renderList(){
-    list.innerHTML = "<li>item</li>"
+    list.innerHTML = ""
+    transaction.forEach((transaction)=>{
+        const li= document.createElement("li")
+        li.innerHTML=transaction.name;
+
+        list.appendChild(li);
+    });
 }
 renderList();
