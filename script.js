@@ -1,5 +1,5 @@
 const transaction =[
-    {
+    /*{
         id:1,
         name: 'salary',
         amount:5000,
@@ -19,13 +19,17 @@ const transaction =[
         amount:5000,
         date: new Date(),
         type:'expenses'
-    },
+    },*/
 
 ];
 const list = document.getElementById("transactionList");
 const status =document.getElementById('status')
 function renderList(){
-    list.innerHTML = ""
+    list.innerHTML = "";
+    if (transaction.length===0) {
+        status.textContent='No transaction.';
+        return;
+    }
     transaction.forEach((transaction)=>{
         const li= document.createElement("li")
         li.innerHTML=transaction.name;
