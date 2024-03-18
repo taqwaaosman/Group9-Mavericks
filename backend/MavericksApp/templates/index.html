@@ -6,13 +6,13 @@
     <meta name="viewpoint"
     content="width=device-width,initial-scale=1.0"/>
     <title>Personal Financial Trucker</title>
-    <link rel="stylesheet" href="{% static 'css/stylesheet.css' %}">    <link rel="stylesheet" href="stylesheet.css"/>
+    <link rel="stylesheet" href="{% static 'css/stylesheet.css' %}">
 </head>
 <body>
 <!--Navbar section-->
  <nav class="navbar">
      <div class="navbar_container">
-         <a href="/" id="navbar_logo"><img src="Images/PTF.png" alt="PTF Logo"></a>
+         <a href="/" id="navbar_logo"><img src="{% static 'Images/PTF.png' %}"></a>
          <div class="navbar_toggle" id="mobile-menu">
              <span class="bar"></span>
              <span class="bar"></span>
@@ -48,7 +48,7 @@
             <button class="main_btn"><a href="Home.html">Get Started</a></button>
         </div>
         <div class="main_img_container">
-            <img src="Images/pic1.jpg" alt="pic" id="main_img"/>
+            <img src="{% static 'Images/pic1.jpg' %}" alt="pic" id="main_img"/>
         </div>
     </div>
 </div>
