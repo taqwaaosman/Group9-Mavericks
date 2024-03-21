@@ -20,13 +20,11 @@
          </div>
          <ul class="navbar_menu">
              <li class="navbar_item">
-                 <a href="Home.html" class="navbar_links">Home</a>
+                 <a href="{% url 'home' %}" class="navbar_links">Services</a>
              </li>
+
              <li class="navbar_item">
-                 <a href="/Expense.html" class="navbar_links">Services</a>
-             </li>
-             <li class="navbar_item">
-                 <a href="/LoginForm.html" class="navbar_links">Join Us</a>
+                 <a href="{% url 'login' %}" class="navbar_links">Join Us</a>
              </li>
               <li class="navbar_btn">
                  <a href="/" class="button">Subscribe</a>

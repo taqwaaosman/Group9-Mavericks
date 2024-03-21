@@ -5,6 +5,7 @@ from django.contrib.auth import authenticate, login
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
 
+ # used chatgbt to create console logs for all events and steps in the code below so that I could debug my code by looking at the console
 def login_view(request):
     print("Logging in...")
     if request.method == 'POST':
