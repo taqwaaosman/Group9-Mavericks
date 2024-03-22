@@ -648,6 +648,9 @@
         text-align: center;
         padding: 10px;
     }
+    ul{
+        list-style-type: none;
+    }
 
      body
     {
