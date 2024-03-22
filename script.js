@@ -30,9 +30,18 @@ function renderList(){
         status.textContent='No transaction.';
         return;
     }
-    transaction.forEach((transaction)=>{
+    transaction.forEach((name,amount,date)=>{
         const li= document.createElement("li")
-        li.innerHTML=transaction.name;
+        li.innerHTML=
+        <div class ="name">
+            <h4>${name}</h4>
+            <p>${new Date(date).toLocaleDateString()}</p>
+
+        </div>;
+        <div class ="amount">
+            <span>${amount}</span>
+
+        </div>
 
         list.appendChild(li);
     });
