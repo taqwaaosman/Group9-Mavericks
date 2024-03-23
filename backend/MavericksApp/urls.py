@@ -19,12 +19,13 @@ from .views import index
 from .views import home
 from .views import registration
 from django.urls import path
-
+from .views import expense
 
 urlpatterns = [
     path('', index, name='index'),
     path('login/', login_view, name='login'),
     path('home/', home, name='home'),
     path('registration/', registration, name='registration'),
-]
+    path('expense/', expense, name='expense'),
+ ]
 
