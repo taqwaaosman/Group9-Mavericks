@@ -1,9 +1,11 @@
-body {
+body{
     margin: 0;
     padding: 0;
     font-family: 'Times New Roman', Times, serif;
-    background-color: rgb(62, 61, 61);
-  }
+    box-sizing: border-box;
+    background-color: black;
+
+}
 
 .navbar {
     background: black;
@@ -108,19 +110,26 @@ body {
 
     }
 
-  .login-container {
-    background-color: #5e5d5dcc;
+  .container {
+    background-color: rgba(0,0,0,0.9);
+      fill-opacity: 0.9;
+      color: white;
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(101, 99, 99, 0.2);
     text-align: center;
     animation: fadeIn 0.5s ease;
-   color: white;
+      display: flex;
+      flex-direction: column;
+      width: 420px;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: auto;
 
   }
 
   h2 {
-    color: black;
+    color: whitesmoke;
       font-size: 36px;
       text-align: center;
       margin-bottom: 20px;
@@ -128,21 +137,26 @@ body {
 
   input[type="text"],
   input[type="password"] {
-    width: 100%;
+    width: 110%;
     padding: 10px;
     margin: 10px 0;
     border: none;
     border-radius: 5px;
     box-sizing: border-box;
+      height: 50px;
   }
 
   input[type="submit"] {
-    width: 100%;
-    padding: 10px;
+    width: 50%;
+    padding: 5px;
+       height: 50px;
     margin-top: 20px;
     border: none;
     border-radius: 5px;
+      box-sizing: border-box;
     background-color: rgb(14, 65, 216);
+      font-weight: bold;
+      font-size: medium;
     color: #0e0d0d;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -150,6 +164,7 @@ body {
 
   input[type="submit"]:hover {
     background-color: rgb(0, 51, 102);
+
   }
 
   @keyframes fadeIn {
