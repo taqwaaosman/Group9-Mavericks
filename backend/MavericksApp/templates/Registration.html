@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/stylesheet.css' %}">
+    <title>Registration</title>
+    <!-- JavaScript input validation -->
+    <script>
+        function validatePassword() {
+            var password = document.getElementById("password1").value;
+            // Check if the password is at least 8 characters long and contains non-numeric characters
+            if (password.length < 8 || /^\d+$/.test(password)) {
+                alert("Password must be at least 8 characters long and contain non-numeric characters.");
+                return false;
+            }
+            return true;
+        }
+
+        // Function to display form data in a pop-up
+        function displayFormData(formData) {
+            alert(formData);
+        }
+    </script>
+    <!-- You can include your CSS or external CSS files here -->
+    <!-- For example:
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    -->
+</head>
+<body>
+<!--Navbar section-->
+<nav class="navbar">
+    <div class="navbar_container">
+        <a href="/" id="navbar_logo"><img src="Images/PTF.png" alt="PTF Logo"></a>
+        <div class="navbar_toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="navbar_menu">
+            <li class="navbar_item">
+                <a href="Home.html" class="navbar_links">Home</a>
+            </li>
+            <li class="navbar_item">
+                <a href="/Expense.html" class="navbar_links">Services</a>
+            </li>
+            <li class="navbar_item">
+                <a href="/" class="navbar_links">Join Us</a>
+            </li>
+            <li class="navbar_btn">
+                <a href="/" class="button">Subscribe</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="wrapper">
+    <h1>Registration</h1>
+    {% if form.errors %}
+    <!-- errors if any -->
+    {% for field, error_list in form.errors.items %}
+    <div>{{ field }}: {{ error_list }}</div>
+    {% endfor %}
+    {% endif %}
+    <form action="{% url 'registration' %}" method="post" onsubmit="return validatePassword()">
+        {% csrf_token %}
+        <div class="input-box">
+            <div class="input-field">
+                <input type="text" name="full_name" placeholder="Full Name">
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-field">
+                <input type="text" name="username" placeholder="UserName" required>
+                <i class='bx bxs-user'></i>
+            </div>
+        </div>
+        <div class="input-box">
+            <div class="input-field">
+                <input type="email" name="email" placeholder="Email" required>
+                <i class='bx bxs-envelope' ></i>
+            </div>
+            <div class="input-field">
+                <input type="Number" name="number" placeholder="Phone Number" required>
+                <i class='bx bxs-phone' ></i>
+            </div>
+        </div>
+        <div class="input-box">
+            <div class="input-field">
+                <input type="password" id="password1" name="password1" placeholder="Password" required>
+                <i class='bx bxs-lock-alt' ></i>
+            </div>
+            <div class="input-field">
+                <input type="password" name="password2" placeholder="Confirm Password" required>
+                <i class='bx bxs-lock-alt' ></i>
+            </div>
+        </div>
+        <label><input type="checkbox">I hereby declare that the above information provided is true</label>
+        <button type="submit" class="btn">Join Us</button>
+    </form>
+</div>
+</body>
+</html>
