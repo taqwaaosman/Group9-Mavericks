@@ -4,6 +4,9 @@ from django.shortcuts import render
 from django.contrib.auth import authenticate, login
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
+from .models import Expense
+from .forms import ExpenseForm
+from django.db.models import Sum
 
  # used chatgbt to create console logs for all events and steps in the code below so that I could debug my code by looking at the console
 def login_view(request):
@@ -57,3 +60,30 @@ def registration(request):
         print("Rendering registration form...")
         form = UserCreationForm()
     return render(request, 'registration.html', {'form': form})
+
+
+def expense(request):
+    print("Expense view function called.")
+
+    if request.method == 'POST':
+        print("POST request received.")
+        form = ExpenseForm(request.POST)
+        if form.is_valid():
+            print("Form is valid.")
+            expense = form.save(commit=False)
+            expense.user = request.user
+            expense.save()
+            print("Expense saved successfully.")
+            return redirect('expense')
+        else:
+            print("Form is not valid.")
+    else:
+        print("GET request received.")
+        form = ExpenseForm()
+
+    expenses = Expense.objects.filter(user=request.user)
+    total_expenses = expenses.aggregate(total=Sum('amount'))['total'] or 0
+    print(f"Total expenses: {total_expenses}")
+
+    print("Rendering expense.html template.")
+    return render(request, 'expense.html', {'form': form, 'expenses': expenses, 'total_expenses': total_expenses})

@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Form</title>
-<!--    <link rel="stylesheet" href="">-->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <style>
     </style>
 </head>
@@ -21,7 +22,7 @@
         </div>
         <div class="pass">Forgot Password?</div>
         <div class="signup_link">
-         Not a registered user yet? <a href="#">Sign up</a>
+         Not a registered user yet? <a href="{% url 'registration' %}">Sign up</a>
         </div>
     </div>
 </body>
